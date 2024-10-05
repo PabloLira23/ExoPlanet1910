@@ -82,7 +82,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
     </div>
 
     <video loop autoplay muted playsinline class="background-video">
-        <source src="media/pag01/video/videook.mp4" type="video/mp4"> <!--TROCAR VÍDEO-->
+        <source src="./img/videook.mp4" type="video/mp4"> <!--TROCAR VÍDEO-->
         Seu navegador não suporta a tag de vídeo.
     </video>
 

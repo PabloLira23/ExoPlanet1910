@@ -69,6 +69,7 @@ if($erro){
     $insert->execute();
     if($insert){
         echo "DEU CERTO!";
+        die();
         unset($_POST); 
         }
     }
@@ -79,15 +80,42 @@ if($erro){
 
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/cadastro.css"> <!-- Use o mesmo arquivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="img-nav">
+            <!-- Insira a imagem ou logotipo aqui -->
+            <img src="caminho/para/seu/logo.png" alt="Logo" />
+        </div>
+    </header>
 
-<form action="" method="post">
-    <h1>Cadastre-se</h1>
-    <span>*Obrigatório</span>
-    <p><label for="">Nome Completo*: </label><input type="text" required placeholder="Digite seu nome completo" name="nome" value="<?php if(!empty($_POST['nome'])){echo $nome;}?>"></p>
-    <p><label for="">E-mail*: </label><input type="email" required placeholder="Digite seu melhor e-mail" name="email" value="<?php if(!empty($_POST['email'])){echo $email;}?>"></p>
-    <p><label for="">Colégio/Universidade: </label><input type="text" placeholder="Digite onde você estuda" name="instituicao" value="<?php if(!empty($_POST['instituicao'])){echo $instituicao;}?>"></p>
-    <p><label for="">Data de nascimento*: </label><input type="date" required name="data_nascimento" value="<?php if(!empty($_POST['data_nascimento'])){echo $data_nascimento;}?>"></p>
-    <p><label for="">Senha*: </label><input type="password" required name="senha" placeholder="Mín. 6 dígitos. Pelo menos um caractere especial e um número."></p>
-    <p><label for="">Repita a senha*: </label><input type="password" required name="confirma_senha" placeholder="Confirme sua senha."></p>
-    <p><button type="submit">Cadastrar</button></p>
-</form>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" method="POST">
+                <p><span><b>Obrigatório *</b></span></p>
+                <input type="text" placeholder="Nome Completo*" required name="nome" value="<?php if(isset($_POST['nome'])){ echo $nome;} ?>" />
+                <input type="email" placeholder="E-mail*" required name="email" value="<?php if(isset($_POST['nome'])){ echo $email;} ?>" />
+                <input type="text" placeholder="Instituição" name="instituicao" value="<?php if(isset($_POST['nome'])){ echo $instituicao;} ?>" />
+                <input type="date" placeholder="Data de Nascimento*" required name="data_nascimento" value="<?php if(isset($_POST['nome'])){ echo $data_nascimento;} ?>" />
+                <input type="password" placeholder="Senha*" required name="senha" />
+                <input type="password" placeholder="Confirma Senha*" required name="confirma_senha" />
+                <button type="submit">Cadastrar</button>
+                <p class="message">Já possui cadastro? <a href="login.php">Entrar</a></p>
+            </form>
+        </div>
+    </div>
+
+    <video loop autoplay muted playsinline class="background-video">
+        <source src="./img/videook.mp4" type="video/mp4"> <!-- TROCAR VÍDEO -->
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+</body>
+</html>
