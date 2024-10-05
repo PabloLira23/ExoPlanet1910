@@ -68,9 +68,8 @@ if($erro){
     $insert->bindParam(':senha', $senha);
     $insert->execute();
     if($insert){
-        echo "DEU CERTO!";
+        header(location: exoplanetas.php);
         die();
-        unset($_POST); 
         }
     }
 

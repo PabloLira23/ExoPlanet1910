@@ -26,7 +26,7 @@
 
     <div class="conteudo-principal">
         <p class="texto-1">Explore os Exoplanetas</p>
-        <p class="texto-2"><a href="login.php"><button class="botao-iniciar">INICIAR A JORNADA</button></a></p>
+        <p class="texto-2"><a href="exoplanetas.php"><button class="botao-iniciar">INICIAR A JORNADA</button></a></p>
         <p class="texto-3">"Descubra mundos além da nossa imaginação,<br>a um clique de distância".</p>
     </div>
 
