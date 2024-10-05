@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    background-image: url('../imgplanetas/OK/HD\ 189733\ b.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Cobre todo o fundo */
+    background-position: center; /* Centraliza o fundo */
+    color: white;
+}
+
+.ret {
+    background-color: blue;
+    padding: 10px; /* Ajusta o espaçamento interno */
+    display: inline-block; /* Faz o div se ajustar ao conteúdo */
+    margin-left: 100px; /* Alinha com o texto do parágrafo */
+}
+
+.texto1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 2% 100px 0 100px; /* Ajusta as margens para alinhamento */
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a leitura */
+}
+
+.par {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    margin: 20px 100px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Dá um leve efeito de sombra no texto */
+}
+
+/* Tornando o site responsivo */
+@media (max-width: 768px) {
+    .texto1 {
+        font-size: 40px;
+        margin: 2% 20px;
+    }
+
+    .ret {
+        margin-left: 20px; /* Reduz a margem esquerda em telas menores */
+    }
+
+    .par {
+        font-size: 1em;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto1 {
+        font-size: 32px;
+        margin: 2% 10px;
+    }
+
+    .ret {
+        margin-left: 10px; /* Ainda menor margem para telas pequenas */
+    }
+
+    .par {
+        font-size: 0.9em;
+        margin: 20px 10px;
+    }
+}

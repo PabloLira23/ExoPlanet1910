@@ -1,0 +1,31 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #111;
+    background-image: url('../imgplanetas/OK/KELT-9b.png');
+}
+
+.ret{
+    background-color: blue;
+}
+
+.texto1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-left: 95px;
+    margin-top: 2%;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para melhorar a leitura */
+}
+
+.par {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    margin: 20px 100px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Dá um leve efeito de sombra no texto */
+}

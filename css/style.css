@@ -4,110 +4,223 @@ body {
     margin: 0;
     padding: 0;
     background-color: #111;
+    font-family: 'Poppins', sans-serif;
 }
 
-li, a{
+li, a {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
 }
 
-.background-video{
+.background-video {
     opacity: 40%;
     position: fixed;
     top: 50%;
     left: 50%;
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Garante que o vídeo preencha a tela */
-    transform: translate(-50%, -50%); /* Centraliza o vídeo na tela */
-    z-index: -1; /* Envia o vídeo para o fundo */
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
-header{
-    margin: auto;
+header {
     display: flex;
-    align-items: center;
-    padding: 20px 0%;
-    box-shadow: 0px 0px 20px;
-    background-color: #111;
-}
-
-.img-nav{
     justify-content: space-between;
-    width: auto;
     align-items: center;
-}
-.nav-link li{
-    padding: 0px 30px;
-    font-family: 'Poppins', medium;
-}
-.nav-link{
-    display: flex;
-    color: #111;
-    list-style: none;
-    align-items: center;
-    position: absolute;
-    transform: translate(-940px, -33px);
+    padding: 20px;
+    background-color: #111;
+    box-shadow: 0px 0px 20px;
 }
 
-.botao-nav{
+.img-nav img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-link {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link li {
+    padding: 0px 10px;
+}
+
+.botao-nav {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 18px;
     background-color: blue;
     border-radius: 10px;
     border: none;
-    position: absolute;
-    transform: translate(1178px, 0px)
-
+    padding: 10px 20px;
 }
 
-.botao a{
+.botao-nav a {
     color: whitesmoke;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .conteudo-principal {
-    position: absolute;
-    top: 35%; /* Ajusta a posição vertical */
-    left: 15%; /* Ajusta a posição horizontal (mais à esquerda) */
-    text-align: left; /* Alinha o texto à esquerda */
+    position: relative;
+    top: 30%;
+    left: 10%;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    text-align: left;
 }
 
-/* Texto "Explore os Exoplanetas" */
 .texto-1 {
-    margin: 0px;
     font-size: 45px;
     font-weight: 400;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    text-shadow: #111;
 }
 
-/* Botão "INICIAR A JORNADA" */
 .botao-iniciar {
-    font-size: 40px; /* Aumenta o tamanho da fonte */
+    font-size: 40px;
     font-weight: 700;
     background-color: blue;
     color: white;
-    padding: 20px 50px;
+    padding: 15px 40px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
-    text-shadow: #111;
 }
 
 .botao-iniciar:hover {
-    background-color: darkblue; /* Muda a cor do botão ao passar o mouse */
+    background-color: darkblue;
 }
 
-/* Texto "Descubra mundos além da nossa imaginação..." */
 .texto-3 {
-    font-size: 20px; /* Define o tamanho menor */
+    font-size: 18px;
     font-weight: 400;
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 0px 2px 2px #111;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .conteudo-principal {
+        left: 5%;
+    }
+
+    .texto-1 {
+        font-size: 38px;
+    }
+
+    .botao-iniciar {
+        font-size: 35px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-link {
+        gap: 15px;
+    }
+
+    .texto-1 {
+        font-size: 32px;
+    }
+
+    .botao-iniciar {
+        font-size: 30px;
+        padding: 8px 25px;
+    }
+
+    .texto-3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .conteudo-principal {
+        top: 35%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .texto-1 {
+        font-size: 28px;
+    }
+
+    .botao-iniciar {
+        font-size: 25px;
+        padding: 8px 20px;
+    }
+
+    .texto-3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .texto-1 {
+        font-size: 24px;
+    }
+
+    .botao-iniciar {
+        font-size: 20px;
+        padding: 6px 15px;
+    }
+
+    .texto-3 {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .botao-nav {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .nav-link {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .texto-1 {
+        font-size: 20px;
+    }
+
+    .botao-iniciar {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .texto-3 {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    .botao-nav {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 }
