@@ -6,7 +6,7 @@
 
 body {
     background-color: #111;
-    background-image: url('../imgplanetas/OK/GLIESE-436b.png');
+    background-image: url('/imgplanetas/gliese-436b.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* Cobre todo o fundo */
     background-position: center; /* Centraliza o fundo */

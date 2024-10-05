@@ -89,12 +89,8 @@ if($erro){
     <link rel="stylesheet" href="./css/cadastro.css"> <!-- Use o mesmo arquivo CSS -->
 </head>
 <body>
-    <header>
-        <div class="img-nav">
-            <!-- Insira a imagem ou logotipo aqui -->
-            <img src="caminho/para/seu/logo.png" alt="Logo" />
-        </div>
-    </header>
+
+    
 
     <div class="login-page">
         <div class="form">

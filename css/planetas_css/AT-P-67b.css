@@ -6,7 +6,7 @@
 
 body {
     background-color: #111;
-    background-image: url('../imgplanetas/DENIS-P\ J082303.1-491201\ b.jpg');
+    background-image: url('/imgplanetas/DENIS-P\ J082303.1-491201\ b.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* Cobre todo o fundo */
     background-position: center; /* Centraliza o fundo */
