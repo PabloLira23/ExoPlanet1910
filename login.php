@@ -12,7 +12,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
         $senha = $_POST['senha'];
 
         if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
-            echo "Insira um e-mail válido!";
+            echo "<h1 style=\"color: white\";\>Insira um e-mail válido!</h1>";
         } else {
             // Consultando o sql usando statement do PDO
             $sql_code = "SELECT * FROM usuarios WHERE user_email = :email";
@@ -28,18 +28,17 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
 
                 // Função que verifica se a senha fornecida bate com o hash armazenado
                 if(password_verify($senha, $user['user_senha'])){
-                    
-                    echo "Login realizado com sucesso!";
+                    header("location: exoplanetas.php");
                     die();
                 } else {
                     
-                    echo "Senha incorreta!";
+                    echo "<h1 style=\"color: white\";\>Senha incorreta!</h1>";
                 }
 
               //caso o usuário não exista...  
             } else {
                 
-                echo "Usuário não encontrado!";
+                echo "<h1 style=\"color: white\";\>Usuário não encontrado!</h1>";
             } 
         }
 
@@ -58,7 +57,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css/login.css">
-    <script src="login.js"></script>
+    <!--<script src="login.js"></script>-->
 </head>
 
 
@@ -73,7 +72,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
                 <p class="message">Já possui cadastro? <a href="#">Entrar</a></p>
             </form>
             <form class="login-form" method="POST">
-                <input type="text" placeholder="Seu e-mail" name="email"/>
+                <input type="text" placeholder="Seu e-mail" name="email" value="<?php if(isset($_POST['email'])){echo $email;}?>"/>
                 <input type="password" placeholder="Senha" name="senha"/>
                 <button type="submit">login</button>
                 <p class="message">Não está registrado? <a href="cadastro.php">Criar Conta</a></p>

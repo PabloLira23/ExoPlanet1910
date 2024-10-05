@@ -55,7 +55,7 @@ if(!isset($_POST['senha']) || !isset($_POST['confirma_senha'])){
 }
 
 if($erro){
-    echo "<p><b>$erro</b></p>";
+    echo "<h1 style=\"color: white\"\>$erro</h1>";
 } else{
     //inserindo os dados no db
     $insert = $conectar->prepare("INSERT INTO usuarios (user_nome, user_email, user_instituicao, user_nascimento, user_senha, user_cadastro) 
@@ -101,10 +101,10 @@ if($erro){
         <div class="form">
             <form class="register-form" method="POST">
                 <p><span><b>Obrigatório *</b></span></p>
-                <input type="text" placeholder="Nome Completo*" required name="nome" value="<?php if(isset($_POST['nome'])){ echo $nome;} ?>" />
-                <input type="email" placeholder="E-mail*" required name="email" value="<?php if(isset($_POST['nome'])){ echo $email;} ?>" />
-                <input type="text" placeholder="Instituição" name="instituicao" value="<?php if(isset($_POST['nome'])){ echo $instituicao;} ?>" />
-                <input type="date" placeholder="Data de Nascimento*" required name="data_nascimento" value="<?php if(isset($_POST['nome'])){ echo $data_nascimento;} ?>" />
+                <input type="text" placeholder="Nome Completo*" required name="nome" value="<?php if(isset($_POST['nome'])){ echo $_POST['nome'];} ?>" />
+                <input type="email" placeholder="E-mail*" required name="email" value="<?php if(isset($_POST['email'])){ echo $_POST['email'];} ?>" />
+                <input type="text" placeholder="Instituição" name="instituicao" value="<?php if(isset($_POST['instituicao'])){ echo $_POST['instituicao'];} ?>" />
+                <input type="date" placeholder="Data de Nascimento*" required name="data_nascimento" value="<?php if(isset($_POST['data_nacimento'])){ echo $_POST['data_nascimento'];} ?>" />
                 <input type="password" placeholder="Senha*" required name="senha" />
                 <input type="password" placeholder="Confirma Senha*" required name="confirma_senha" />
                 <button type="submit">Cadastrar</button>
