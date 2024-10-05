@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbitEX - Explore os Exoplanetas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ico/Logo - OrbitEX.ico" type="image/x-icon">
+</head>
+<body>
+    <header style="width: 1536px;"> <!--barra preta--> 
+    <div class="img-nav"><img src="img/nav.png" alt="" style="width: 1530px;"></div> <!--Logo com linhas-->
+
+        <nav>
+            <ul class="nav-link">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Notícias</a></li>
+            </ul>
+        </nav>
+
+        <button class="botao">
+            <a href="#" target="_blank">Login</a>
+        </button>
+   </header>
+   
+   <div class="banner">
+    <video autoplay muted loop>
+        <source src="media/pag01/vídeo/planeta.mp4" type="video/mp4">
+    </video>
+   </div>
+</html>
