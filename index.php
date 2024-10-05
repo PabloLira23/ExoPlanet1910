@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,9 +20,11 @@
             </ul>
         </nav>
 
-        <button class="botao">
-            <a href="#" target="_blank">Login</a>
-        </button>
+        <form action="" method="post">
+            <button class="botao" name=button>
+                <a href="login.php">Login</a>
+            </button>
+        </form>
    </header>
    
    <div class="banner">
