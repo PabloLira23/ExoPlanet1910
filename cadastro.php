@@ -38,7 +38,7 @@ if(isset($_POST['instituicao'])){
 } 
 
 
-if(!isset($_POST['data_nascimento'])){
+if(empty($_POST['data_nascimento'])){
     $erro = "Preencha a data de nascimento!";
 } else{
     $data_nascimento = sanitizar_texto($_POST['data_nascimento']);
