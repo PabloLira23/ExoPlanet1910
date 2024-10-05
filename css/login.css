@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+header {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0px 0px 20px;
+    background-color: #111;
+    position: relative; /* Mantenha o header no topo */
+    z-index: 10; /* Certifique-se de que a navbar fique sobre o vídeo */
+}
+
+.img-nav {
+    width: auto;
+    align-items: center;
+}
+
+.nav-link li {
+    padding: 0px 30px;
+    font-family: 'Poppins', medium;
+}
+
+.nav-link {
+    display: flex;
+    color: #111;
+    list-style: none;
+    align-items: center;
+    position: relative; /* Ajuste para não interferir na barra de navegação */
+}
+
+.botao-nav {
+    font-size: 25px;
+    background-color: blue;
+    border-radius: 10px;
+    border: none;
+    margin-left: auto; /* Adiciona margem automática para alinhar à direita */
+}
+
+.botao a {
+    color: whitesmoke;
+    font-family: 'Poppins', bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para empilhar o header e o login verticalmente */
+    height: 100vh;
+    overflow: hidden;
+}
+
+li, a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.background-video {
+    opacity: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* O vídeo deve estar atrás de todos os elementos */
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 80px); /* Subtrai a altura do header */
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 400px; /* Aumentei o tamanho do bloco de login */
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px; /* Aumentei o padding para mais espaçamento interno */
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px; /* Borda arredondada */
+}
+
+.form input {
+    font-family: 'Poppins';
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 20px; /* Aumentei o espaçamento entre os inputs */
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px; /* Aumentei o tamanho da fonte dos inputs */
+}
+
+.form button {
+    font-family: 'Poppins', bold;
+    text-transform: uppercase;
+    outline: 0;
+    background: #0000ff;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+    background: blue;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #111;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+.form .message a {
+    color: #0000ff;
+    font-size: 20px;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+
+.form .register-form {
+    display: none;
+}

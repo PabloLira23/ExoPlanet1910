@@ -30,7 +30,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
                 if(password_verify($senha, $user['user_senha'])){
                     
                     echo "Login realizado com sucesso!";
-
+                    die();
                 } else {
                     
                     echo "Senha incorreta!";
@@ -51,27 +51,40 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="login.js"></script>
 </head>
+
+
 <body>
-    
-<form action="" method="post">
-<h1>Entrar</h1>
-    <p>
-        <label for="">E-mail: </label>
-        <input type="email" name="email">
-    </p>
-    <p>
-        <label for="">Senha: </label>
-        <input type="password" name="senha">
-    </p>
-    <button type="submit">Entrar</button>
-    </form>    
-    <p><a href="#">Esqueci minha senha</a></p>
-    <p><a href="cadastro.php">Cadastre-se</a></p>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name" />
+                <input type="password" placeholder="Senha" />
+                <input type="text" placeholder="E-mail" />
+                <button>create</button>
+                <p class="message">Já possui cadastro? <a href="#">Entrar</a></p>
+            </form>
+            <form class="login-form" method="POST">
+                <input type="text" placeholder="Seu e-mail" name="email"/>
+                <input type="password" placeholder="Senha" name="senha"/>
+                <button type="submit">login</button>
+                <p class="message">Não está registrado? <a href="cadastro.php">Criar Conta</a></p>
+            </form>
+        </div>
+    </div>
+
+    <video loop autoplay muted playsinline class="background-video">
+        <source src="media/pag01/video/videook.mp4" type="video/mp4"> <!--TROCAR VÍDEO-->
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
 </body>
 </html>
